@@ -1,0 +1,39 @@
+form label{
+    font-weight: 700 !important;
+    font-size: 15px;
+}
+.sign-in{
+    background-color: #fa3d69;
+}
+.sign-in:hover{
+    background-color: #ef305c;
+}
+.creat-btn{
+    background-color: #ef305c;
+}
+.creat-btn:hover{
+    background-color: #ef305c;
+    
+}
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #888; /* Text color */
+    font-size: 14px;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #ccc; /* Line color */
+    margin: 0 10px; /* Space between line and text */
+  }
+.create-popup input:focus{
+    box-shadow: rgba(89, 88, 88, 0.02) 0px 1px 3px 0px, rgba(142, 143, 145, 0.15) 0px 0px 0px 1px;
+    border: 0.5px dotted;
+}
+.create-account-popup{
+    background-color: rgba(0,0,0,0.7);
+}

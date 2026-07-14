@@ -1,0 +1,120 @@
+.manage-subscription {
+  padding: 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.page-title {
+  color: #333;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.page-subtitle {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 40px;
+}
+
+.form-section {
+  background: #fdfdfd;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  margin-bottom: 30px;
+}
+
+.form-section h3 {
+  font-size: 18px;
+  color: #ef305c;
+  margin-bottom: 10px;
+}
+
+.field-desc {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.file-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.status-badge {
+  display: inline-block;
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.point-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.point-row input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.remove-btn {
+  background: #fff0f0;
+  color: #d32f2f;
+  border: 1px solid #ffcdd2;
+  padding: 0 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.remove-btn:hover {
+  background: #d32f2f;
+  color: #fff;
+}
+
+.add-btn {
+  background: #f0f4ff;
+  color: #1353fe;
+  border: 1px solid #c5d4ff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.add-btn:hover {
+  background: #1353fe;
+  color: #fff;
+}
+
+.submit-section {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.save-btn {
+  background: #ef305c !important;
+  color: white !important;
+  padding: 12px 30px !important;
+  font-weight: bold !important;
+  border-radius: 8px !important;
+  text-transform: none !important;
+  font-size: 16px !important;
+}

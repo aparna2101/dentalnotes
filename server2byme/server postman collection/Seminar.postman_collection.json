@@ -1,0 +1,3652 @@
+{
+	"info": {
+		"_postman_id": "d03c1423-725a-4247-8077-16c8b577e9c4",
+		"name": "Seminar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33771971"
+	},
+	"item": [
+		{
+			"name": "website",
+			"item": [
+				{
+					"name": "student",
+					"item": [
+						{
+							"name": "Register Student",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"branch\":\"computer Science\",\r\n    \"degree\":\"BCA\",\r\n    \"firstName\":\"adnan\",\r\n    \"lastName\":\"khan\",\r\n    \"email\":\"adnan@212gmail.com\",\r\n    \"gender\":\"MALE\",\r\n    \"phone\":8956369962\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/website/student/6659701b6d0b98b7e76e6075",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"website",
+										"student",
+										"6659701b6d0b98b7e76e6075"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Register Student",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"branch\":\"computer Science\",\r\n    \"degree\":\"BCA\",\r\n    \"firstName\":\"adnan\",\r\n    \"lastName\":\"khan\",\r\n    \"email\":\"adnan@21gmail.com\",\r\n    \"gender\":\"MALE\",\r\n    \"phone\":8956369962\r\n    \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/website/student/6659701b6d0b98b7e76e6075",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"website",
+												"student",
+												"6659701b6d0b98b7e76e6075"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "261"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"105-HTnLEDcRKdvN48PNQOMqK9WIekA\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 07:11:25 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Student added successfully\",\n    \"studentId\": \"6662b29d9d061ce110a1f97f\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjJiMjlkOWQwNjFjZTExMGExZjk3ZiIsImlhdCI6MTcxNzc0NDI4NSwiZXhwIjoxNzE4MzQ5MDg1fQ.v9-fWyLGJG_ftzjPY8efL6Ui2UpEzZ17p-iQbR3EPng\"\n}"
+								}
+							]
+						},
+						{
+							"name": "get all Question of Queston set",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"branch\":\"computer Science\",\r\n    \"degree\":\"BCA\",\r\n    \"firstName\":\"shakir\",\r\n    \"lastName\":\"ansari\",\r\n    \"email\":\"shakir@212gmail.com\",\r\n    \"gender\":\"MALE\",\r\n    \"phone\":8956369962\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/website/student/testByQuestionSet/6656cdbc9eec676cc7b88352",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"website",
+										"student",
+										"testByQuestionSet",
+										"6656cdbc9eec676cc7b88352"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get all Question of Queston set",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/website/student/testByQuestionSet/665970ebfdc7d61c9b19371f",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"website",
+												"student",
+												"testByQuestionSet",
+												"665970ebfdc7d61c9b19371f"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1387"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"56b-3QQqiO+e1T521qjd0UkmxXPi8xI\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 07:12:20 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"data\": [\n            {\n                \"_id\": \"665972a4fdc7d61c9b193729\",\n                \"type\": \"MCQ\",\n                \"hint\": \"Name of  king from Ramayana\",\n                \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                \"options\": [\n                    \"Mumbai\",\n                    \"kolkata\",\n                    \"chennai\",\n                    \"New Delhi\"\n                ],\n                \"createdAt\": \"2024-05-31T06:48:04.750Z\",\n                \"updatedAt\": \"2024-05-31T06:48:04.750Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"66597227fdc7d61c9b193727\",\n                \"type\": \"MCQ\",\n                \"hint\": \"Located at the Arabean Sea \",\n                \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                \"options\": [\n                    \"Mumbai\",\n                    \"kolkata\",\n                    \"chennai\",\n                    \"New Delhi\"\n                ],\n                \"createdAt\": \"2024-05-31T06:45:59.733Z\",\n                \"updatedAt\": \"2024-05-31T06:45:59.733Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"665971dffdc7d61c9b193725\",\n                \"type\": \"MCQ\",\n                \"hint\": \"Located at the Arabean Sea \",\n                \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                \"options\": [\n                    \"Mumbai\",\n                    \"kolkata\",\n                    \"chennai\",\n                    \"New Delhi\"\n                ],\n                \"createdAt\": \"2024-05-31T06:44:47.193Z\",\n                \"updatedAt\": \"2024-05-31T06:44:47.193Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"665971b3fdc7d61c9b193723\",\n                \"type\": \"MCQ\",\n                \"hint\": \"Located at the Arabean Sea \",\n                \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                \"options\": [\n                    \"Mumbai\",\n                    \"kolkata\",\n                    \"chennai\",\n                    \"New Delhi\"\n                ],\n                \"createdAt\": \"2024-05-31T06:44:03.340Z\",\n                \"updatedAt\": \"2024-05-31T06:44:03.340Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6659717cfdc7d61c9b193721\",\n                \"type\": \"MCQ\",\n                \"hint\": \"Located at the hear of India\",\n                \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                \"options\": [\n                    \"Mumbai\",\n                    \"kolkata\",\n                    \"chennai\",\n                    \"New Delhi\"\n                ],\n                \"createdAt\": \"2024-05-31T06:43:08.578Z\",\n                \"updatedAt\": \"2024-05-31T06:43:08.578Z\",\n                \"__v\": 0\n            }\n        ],\n        \"totalCount\": 5\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "submit test",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"questionSetId\":\"6656cdbc9eec676cc7b88352\",\r\n   \"seminarId\":\"6656cdbc9eec676cc7b88352\",\r\n   \"studentId\":\"6656ee1e1509b7e1a7830510\",\r\n   \"answers\":[{\"6656e13127788180b01a3f66\":\"english\"},{\"6656e1a127788180b01a3f68\":\"mohd shakir mohd shabbir ansari\"}]\r\n   \r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/website/student/submitTest",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"website",
+										"student",
+										"submitTest"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get all Question of Queston set Copy",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"questionSetId\":\"665970ebfdc7d61c9b19371f\",\r\n   \"seminarId\":\"6659701b6d0b98b7e76e6075\",\r\n   \"studentId\":\"6659745bfdc7d61c9b193734\",\r\n   \"answers\":[{\"6659717cfdc7d61c9b193721\":\"New Delhi\"},{\"665972a4fdc7d61c9b193729\":\"mumbai\"},{\"665971dffdc7d61c9b193725\":\"chennai\"},{\"66597227fdc7d61c9b193727\":\"chennai\"},{\"665971b3fdc7d61c9b193723\":\"bharat\"}]\r\n   \r\n    \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/website/student/submitTest",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"website",
+												"student",
+												"submitTest"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "332"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"14c-WK/QYPoVi2mz7/R6yV5+p8/wmfc\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 07:17:18 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n        \"studentId\": \"6659745bfdc7d61c9b193734\",\n        \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n        \"status\": \"FAIL\",\n        \"obtainMarks\": 20,\n        \"passingMarks\": 30,\n        \"maxScore\": 50,\n        \"_id\": \"6662b3fe81147800e2def519\",\n        \"createdAt\": \"2024-06-07T07:17:18.090Z\",\n        \"updatedAt\": \"2024-06-07T07:17:18.090Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "getResultOfStudent",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"questionSetId\":\"665970ebfdc7d61c9b19371f\",\r\n   \"seminarId\":\"6659701b6d0b98b7e76e6075\",\r\n   \"studentId\":\"665973f5fdc7d61c9b193730\"\r\n \r\n   \r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/website/student/getResultByQuestionSetId/665970ebfdc7d61c9b19371f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"website",
+										"student",
+										"getResultByQuestionSetId",
+										"665970ebfdc7d61c9b19371f"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "submit test Copy",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTk5ODI2ZDczMzNlMDliMmQyMGRjYiIsImlhdCI6MTcxNzE0NzY4NiwiZXhwIjoxNzE3NzUyNDg2fQ.catNX-vXaC4MQd1KZp3u3wSGNWybvdktfICJbs041OI"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{ \r\n   \"seminarId\":\"6659701b6d0b98b7e76e6075\",\r\n   \"studentId\":\"665973f5fdc7d61c9b193730\"   \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/website/student/getResultByQuestionSetId/665970ebfdc7d61c9b19371f",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"website",
+												"student",
+												"getResultByQuestionSetId",
+												"665970ebfdc7d61c9b19371f"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "317"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"13d-SlKy909Rw862vfPsdLjt6oSMaiQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 07:19:26 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"result\": {\n        \"_id\": \"66597713fdc7d61c9b193740\",\n        \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n        \"studentId\": \"665973f5fdc7d61c9b193730\",\n        \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n        \"status\": \"PASS\",\n        \"obtainMarks\": 40,\n        \"passingMarks\": 30,\n        \"maxScore\": 50,\n        \"createdAt\": \"2024-05-31T07:06:59.331Z\",\n        \"updatedAt\": \"2024-05-31T07:06:59.331Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "rankedResult",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"questionSetId\":\"665970ebfdc7d61c9b19371f\",\r\n   \"seminarId\":\"6659701b6d0b98b7e76e6075\",\r\n   \"studentId\":\"665973f5fdc7d61c9b193730\"\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/website/student/rankedResult",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"website",
+										"student",
+										"rankedResult"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "studentResultByRank",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"questionSetId\":\"665970ebfdc7d61c9b19371f\",\r\n   \"seminarId\":\"6659701b6d0b98b7e76e6075\",\r\n   \"studentId\":\"66597389fdc7d61c9b19372e\"\r\n    \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/website/student/rankedResult",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"website",
+												"student",
+												"rankedResult"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1457"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"5b1-IVGe0svM4MBcpEpFS3st6iw8v8o\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 07:19:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"totalStudent\": 6,\n    \"noOfAttemptedStudent\": 4,\n    \"noOfUnattemptedStudent\": 2,\n    \"percentageOfPassStudent\": 50,\n    \"percentageOfFailStudent\": 50,\n    \"noOfPassStudent\": 3,\n    \"noOfFailStudent\": 3,\n    \"topStudent\": [\n        {\n            \"_id\": \"665975f4fdc7d61c9b193738\",\n            \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n            \"studentId\": \"66597389fdc7d61c9b19372e\",\n            \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n            \"status\": \"PASS\",\n            \"obtainMarks\": 50,\n            \"passingMarks\": 30,\n            \"maxScore\": 50,\n            \"createdAt\": \"2024-05-31T07:02:12.494Z\",\n            \"updatedAt\": \"2024-05-31T07:02:12.494Z\",\n            \"__v\": 0,\n            \"rank\": 1\n        },\n        {\n            \"_id\": \"66597755fdc7d61c9b193744\",\n            \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n            \"studentId\": \"6659742afdc7d61c9b193732\",\n            \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n            \"status\": \"PASS\",\n            \"obtainMarks\": 45,\n            \"passingMarks\": 30,\n            \"maxScore\": 50,\n            \"createdAt\": \"2024-05-31T07:08:05.206Z\",\n            \"updatedAt\": \"2024-05-31T07:08:05.206Z\",\n            \"__v\": 0,\n            \"rank\": 2\n        },\n        {\n            \"_id\": \"66597713fdc7d61c9b193740\",\n            \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n            \"studentId\": \"665973f5fdc7d61c9b193730\",\n            \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n            \"status\": \"PASS\",\n            \"obtainMarks\": 40,\n            \"passingMarks\": 30,\n            \"maxScore\": 50,\n            \"createdAt\": \"2024-05-31T07:06:59.331Z\",\n            \"updatedAt\": \"2024-05-31T07:06:59.331Z\",\n            \"__v\": 0,\n            \"rank\": 3\n        }\n    ],\n    \"student\": {\n        \"_id\": \"665975f4fdc7d61c9b193738\",\n        \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n        \"studentId\": \"66597389fdc7d61c9b19372e\",\n        \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n        \"status\": \"PASS\",\n        \"obtainMarks\": 50,\n        \"passingMarks\": 30,\n        \"maxScore\": 50,\n        \"createdAt\": \"2024-05-31T07:02:12.494Z\",\n        \"updatedAt\": \"2024-05-31T07:02:12.494Z\",\n        \"__v\": 0,\n        \"rank\": 1\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "getAllQuestionSetOfSeminar",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"questionSetId\":\"665970ebfdc7d61c9b19371f\",\r\n   \"seminarId\":\"6659701b6d0b98b7e76e6075\",\r\n   \"studentId\":\"665973f5fdc7d61c9b193730\"\r\n \r\n   \r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/website/student/getAllQuestionSetOfSeminar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"website",
+										"student",
+										"getAllQuestionSetOfSeminar"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "getAllQuestionSetOfSeminar",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n   \"questionSetId\":\"665970ebfdc7d61c9b19371f\",\r\n   \"seminarId\":\"6659701b6d0b98b7e76e6075\",\r\n   \"studentId\":\"665973f5fdc7d61c9b193730\"\r\n \r\n   \r\n    \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/website/student/getAllQuestionSetOfSeminar",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"website",
+												"student",
+												"getAllQuestionSetOfSeminar"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "3096"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"c18-TAnsQN7OopxLlUtuePQ69ExYW5M\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 07:21:00 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"data\": [\n            {\n                \"_id\": \"6662ae7dc74b6d65a28342c7\",\n                \"name\": \"Question on Micro services\",\n                \"noOfQuestion\": 5,\n                \"duration\": 6,\n                \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n                \"serialNumber\": \"01\",\n                \"isVisible\": true,\n                \"passingMarks\": \"30\",\n                \"createdAt\": \"2024-06-07T06:53:49.161Z\",\n                \"updatedAt\": \"2024-06-07T06:54:46.181Z\",\n                \"__v\": 0,\n                \"questions\": [\n                    {\n                        \"_id\": \"6662af92c74b6d65a28342cc\",\n                        \"question\": \"India is also called is\",\n                        \"type\": \"MCQ\",\n                        \"hint\": \"Name of  king from Ramayana\",\n                        \"questionSetId\": \"6662ae7dc74b6d65a28342c7\",\n                        \"options\": [\n                            \"Mumbai\",\n                            \"kolkata\",\n                            \"chennai\",\n                            \"New Delhi\"\n                        ],\n                        \"createdAt\": \"2024-06-07T06:58:26.873Z\",\n                        \"updatedAt\": \"2024-06-07T06:58:26.873Z\",\n                        \"__v\": 0\n                    }\n                ]\n            },\n            {\n                \"_id\": \"6662ad60044a2822f9a3dd44\",\n                \"name\": \"Question on Micro services\",\n                \"noOfQuestion\": 5,\n                \"duration\": 30,\n                \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n                \"serialNumber\": \"01\",\n                \"passingMarks\": \"30\",\n                \"createdAt\": \"2024-06-07T06:49:04.784Z\",\n                \"updatedAt\": \"2024-06-07T06:50:38.536Z\",\n                \"__v\": 0,\n                \"questions\": []\n            },\n            {\n                \"_id\": \"6662acf3baf2519f8cb7ee7a\",\n                \"name\": \"Question on Micro services\",\n                \"noOfQuestion\": 5,\n                \"duration\": 6,\n                \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n                \"serialNumber\": \"01\",\n                \"passingMarks\": \"30\",\n                \"createdAt\": \"2024-06-07T06:47:15.427Z\",\n                \"updatedAt\": \"2024-06-07T06:47:15.427Z\",\n                \"__v\": 0,\n                \"questions\": []\n            },\n            {\n                \"_id\": \"666015b8062505ed7766b6b8\",\n                \"name\": \"NOdeJs  basic MCQ\",\n                \"noOfQuestion\": 5,\n                \"duration\": 6,\n                \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n                \"serialNumber\": \"01\",\n                \"passingMarks\": \"30\",\n                \"createdAt\": \"2024-06-05T07:37:28.536Z\",\n                \"updatedAt\": \"2024-06-05T07:37:28.536Z\",\n                \"__v\": 0,\n                \"questions\": []\n            },\n            {\n                \"_id\": \"665970ebfdc7d61c9b19371f\",\n                \"name\": \"Personal Detail MCQ\",\n                \"noOfQuestion\": 5,\n                \"duration\": 6,\n                \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n                \"serialNumber\": \"01\",\n                \"passingMarks\": \"30\",\n                \"createdAt\": \"2024-05-31T06:40:43.331Z\",\n                \"updatedAt\": \"2024-05-31T06:40:43.331Z\",\n                \"__v\": 0,\n                \"questions\": [\n                    {\n                        \"_id\": \"6659717cfdc7d61c9b193721\",\n                        \"type\": \"MCQ\",\n                        \"hint\": \"Located at the hear of India\",\n                        \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                        \"options\": [\n                            \"Mumbai\",\n                            \"kolkata\",\n                            \"chennai\",\n                            \"New Delhi\"\n                        ],\n                        \"createdAt\": \"2024-05-31T06:43:08.578Z\",\n                        \"updatedAt\": \"2024-05-31T06:43:08.578Z\",\n                        \"__v\": 0\n                    },\n                    {\n                        \"_id\": \"665971b3fdc7d61c9b193723\",\n                        \"type\": \"MCQ\",\n                        \"hint\": \"Located at the Arabean Sea \",\n                        \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                        \"options\": [\n                            \"Mumbai\",\n                            \"kolkata\",\n                            \"chennai\",\n                            \"New Delhi\"\n                        ],\n                        \"createdAt\": \"2024-05-31T06:44:03.340Z\",\n                        \"updatedAt\": \"2024-05-31T06:44:03.340Z\",\n                        \"__v\": 0\n                    },\n                    {\n                        \"_id\": \"665971dffdc7d61c9b193725\",\n                        \"type\": \"MCQ\",\n                        \"hint\": \"Located at the Arabean Sea \",\n                        \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                        \"options\": [\n                            \"Mumbai\",\n                            \"kolkata\",\n                            \"chennai\",\n                            \"New Delhi\"\n                        ],\n                        \"createdAt\": \"2024-05-31T06:44:47.193Z\",\n                        \"updatedAt\": \"2024-05-31T06:44:47.193Z\",\n                        \"__v\": 0\n                    },\n                    {\n                        \"_id\": \"66597227fdc7d61c9b193727\",\n                        \"type\": \"MCQ\",\n                        \"hint\": \"Located at the Arabean Sea \",\n                        \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                        \"options\": [\n                            \"Mumbai\",\n                            \"kolkata\",\n                            \"chennai\",\n                            \"New Delhi\"\n                        ],\n                        \"createdAt\": \"2024-05-31T06:45:59.733Z\",\n                        \"updatedAt\": \"2024-05-31T06:45:59.733Z\",\n                        \"__v\": 0\n                    },\n                    {\n                        \"_id\": \"665972a4fdc7d61c9b193729\",\n                        \"type\": \"MCQ\",\n                        \"hint\": \"Name of  king from Ramayana\",\n                        \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                        \"options\": [\n                            \"Mumbai\",\n                            \"kolkata\",\n                            \"chennai\",\n                            \"New Delhi\"\n                        ],\n                        \"createdAt\": \"2024-05-31T06:48:04.750Z\",\n                        \"updatedAt\": \"2024-05-31T06:48:04.750Z\",\n                        \"__v\": 0\n                    }\n                ]\n            }\n        ],\n        \"totalCount\": 5\n    }\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "register New admin",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"shakir\",\r\n    \"lastName\":\"ansari\",\r\n    \"email\":\"shakir97301999@gmail.com\",\r\n    \"password\":\"shakirHero\",\r\n    \"phone\":8956369962,\r\n    \"gender\":\"MALE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/user/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"user",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "register New admin",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\":\"admin\",\r\n    \"lastName\":\"super\",\r\n    \"email\":\"superAdmin199@gmail.com\",\r\n    \"password\":\"Admin123\",\r\n    \"phone\":8956369962,\r\n    \"gender\":\"MALE\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/user/register",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"user",
+												"register"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "488"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1e8-nZMPy52DgeatmKKDXdwfGpWagok\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 07:05:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"user\": {\n        \"isDelete\": false,\n        \"email\": \"superAdmin199@gmail.com\",\n        \"password\": \"$2b$08$u3v5smP9s43QGgAr04XX6uBy044i9YIOGYf2UD2c4jg7zYvyjRaFK\",\n        \"firstName\": \"admin\",\n        \"lastName\": \"super\",\n        \"gender\": \"MALE\",\n        \"phone\": 8956369962,\n        \"emailVerified\": false,\n        \"phoneVerified\": false,\n        \"status\": \"active\",\n        \"role\": \"STUDENT\",\n        \"resetPasswordOTP\": null,\n        \"_id\": \"6662b155c74b6d65a28342da\",\n        \"createdAt\": \"2024-06-07T07:05:57.488Z\",\n        \"updatedAt\": \"2024-06-07T07:05:57.488Z\",\n        \"__v\": 0,\n        \"fullName\": \"admin super\",\n        \"id\": \"6662b155c74b6d65a28342da\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\":\"shakir\",\r\n    \"lastName\":\"ansari\",\r\n    \"email\":\"shakir97301999@gmail.com\",\r\n    \"password\":\"shakirHero\",\r\n    \"phone\":8956369962,\r\n    \"gender\":\"MALE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/user/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"user",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \r\n    \"email\":\"superAdmin199@gmail.com\",\r\n    \"password\":\"Admin123\"\r\n    \r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/user/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"user",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "484"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1e4-BMdp+aKtoWSEwfxCHIHSHhQscY8\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 07:06:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"_id\": \"6662b155c74b6d65a28342da\",\n        \"id\": \"6662b155c74b6d65a28342da\",\n        \"role\": \"STUDENT\",\n        \"email\": \"superAdmin199@gmail.com\",\n        \"firstName\": \"admin\",\n        \"lastName\": \"super\",\n        \"phone\": 8956369962,\n        \"phoneVerified\": false,\n        \"emailVerified\": false,\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NjJiMTU1Yzc0YjZkNjVhMjgzNDJkYSIsImlhdCI6MTcxNzc0Mzk5MCwiZXhwIjoxNzE4MzQ4NzkwfQ.KCMUFy8Wo47hQb7jQXUFB9xgnPbFr0LF3NeejREOVSg\",\n        \"status\": \"active\",\n        \"createdAt\": \"2024-06-07T07:05:57.488Z\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Question set",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Question on Micro services\",\r\n    \"isvisible\":true,\r\n    \"passingMarks\":30,\r\n    \"duration\":6,\r\n    \"noOfQuestion\":5,\r\n    \"serialNumber\":\"01\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/questionSet/6659701b6d0b98b7e76e6075",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"questionSet",
+										"6659701b6d0b98b7e76e6075"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Question on Micro services\",\r\n    \"isvisible\":true,\r\n    \"passingMarks\":30,\r\n    \"duration\":6,\r\n    \"noOfQuestion\":5,\r\n    \"serialNumber\":\"01\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/questionSet/6659701b6d0b98b7e76e6075",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"questionSet",
+												"6659701b6d0b98b7e76e6075"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "343"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"157-ZePN2g0NmMeHFA9T2HMKK3rQ2rk\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 06:49:04 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"message\": \"QuestionSet added successfully\",\n        \"data\": {\n            \"name\": \"Question on Micro services\",\n            \"noOfQuestion\": 5,\n            \"duration\": 6,\n            \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n            \"serialNumber\": \"01\",\n            \"passingMarks\": \"30\",\n            \"_id\": \"6662ad60044a2822f9a3dd44\",\n            \"createdAt\": \"2024-06-07T06:49:04.784Z\",\n            \"updatedAt\": \"2024-06-07T06:49:04.784Z\",\n            \"__v\": 0\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "getAllBySeminarId",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Node.js set Basic\",\r\n    \"isvisible\":true,\r\n    \"passingMarks\":1000,\r\n    \"serialNumber\":4200\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/questionSet/seminarAllQuestionSet/6659701b6d0b98b7e76e6075",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"questionSet",
+										"seminarAllQuestionSet",
+										"6659701b6d0b98b7e76e6075"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "getAllBySeminarId",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Node.js set Basic\",\r\n    \"isvisible\":true,\r\n    \"passingMarks\":1000,\r\n    \"serialNumber\":4200\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/questionSet/seminarAllQuestionSet/6659701b6d0b98b7e76e6075",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"questionSet",
+												"seminarAllQuestionSet",
+												"6659701b6d0b98b7e76e6075"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "2625"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"a41-wgEFCWcoUqDphd9yjItkZVHWZKg\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 06:52:05 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"data\": [\n            {\n                \"_id\": \"6662ad60044a2822f9a3dd44\",\n                \"name\": \"Question on Micro services\",\n                \"noOfQuestion\": 5,\n                \"duration\": 30,\n                \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n                \"serialNumber\": \"01\",\n                \"passingMarks\": \"30\",\n                \"createdAt\": \"2024-06-07T06:49:04.784Z\",\n                \"updatedAt\": \"2024-06-07T06:50:38.536Z\",\n                \"__v\": 0,\n                \"questions\": []\n            },\n            {\n                \"_id\": \"6662acf3baf2519f8cb7ee7a\",\n                \"name\": \"Question on Micro services\",\n                \"noOfQuestion\": 5,\n                \"duration\": 6,\n                \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n                \"serialNumber\": \"01\",\n                \"passingMarks\": \"30\",\n                \"createdAt\": \"2024-06-07T06:47:15.427Z\",\n                \"updatedAt\": \"2024-06-07T06:47:15.427Z\",\n                \"__v\": 0,\n                \"questions\": []\n            },\n            {\n                \"_id\": \"666015b8062505ed7766b6b8\",\n                \"name\": \"NOdeJs  basic MCQ\",\n                \"noOfQuestion\": 5,\n                \"duration\": 6,\n                \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n                \"serialNumber\": \"01\",\n                \"passingMarks\": \"30\",\n                \"createdAt\": \"2024-06-05T07:37:28.536Z\",\n                \"updatedAt\": \"2024-06-05T07:37:28.536Z\",\n                \"__v\": 0,\n                \"questions\": []\n            },\n            {\n                \"_id\": \"665970ebfdc7d61c9b19371f\",\n                \"name\": \"Personal Detail MCQ\",\n                \"noOfQuestion\": 5,\n                \"duration\": 6,\n                \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n                \"serialNumber\": \"01\",\n                \"passingMarks\": \"30\",\n                \"createdAt\": \"2024-05-31T06:40:43.331Z\",\n                \"updatedAt\": \"2024-05-31T06:40:43.331Z\",\n                \"__v\": 0,\n                \"questions\": [\n                    {\n                        \"_id\": \"6659717cfdc7d61c9b193721\",\n                        \"type\": \"MCQ\",\n                        \"hint\": \"Located at the hear of India\",\n                        \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                        \"options\": [\n                            \"Mumbai\",\n                            \"kolkata\",\n                            \"chennai\",\n                            \"New Delhi\"\n                        ],\n                        \"correctOption\": \"New Delhi\",\n                        \"createdAt\": \"2024-05-31T06:43:08.578Z\",\n                        \"updatedAt\": \"2024-05-31T06:43:08.578Z\",\n                        \"__v\": 0\n                    },\n                    {\n                        \"_id\": \"665971b3fdc7d61c9b193723\",\n                        \"type\": \"MCQ\",\n                        \"hint\": \"Located at the Arabean Sea \",\n                        \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                        \"options\": [\n                            \"Mumbai\",\n                            \"kolkata\",\n                            \"chennai\",\n                            \"New Delhi\"\n                        ],\n                        \"correctOption\": \"Mumbai\",\n                        \"createdAt\": \"2024-05-31T06:44:03.340Z\",\n                        \"updatedAt\": \"2024-05-31T06:44:03.340Z\",\n                        \"__v\": 0\n                    },\n                    {\n                        \"_id\": \"665971dffdc7d61c9b193725\",\n                        \"type\": \"MCQ\",\n                        \"hint\": \"Located at the Arabean Sea \",\n                        \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                        \"options\": [\n                            \"Mumbai\",\n                            \"kolkata\",\n                            \"chennai\",\n                            \"New Delhi\"\n                        ],\n                        \"correctOption\": \"kolkata\",\n                        \"createdAt\": \"2024-05-31T06:44:47.193Z\",\n                        \"updatedAt\": \"2024-05-31T06:44:47.193Z\",\n                        \"__v\": 0\n                    },\n                    {\n                        \"_id\": \"66597227fdc7d61c9b193727\",\n                        \"type\": \"MCQ\",\n                        \"hint\": \"Located at the Arabean Sea \",\n                        \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                        \"options\": [\n                            \"Mumbai\",\n                            \"kolkata\",\n                            \"chennai\",\n                            \"New Delhi\"\n                        ],\n                        \"correctOption\": \"chennai\",\n                        \"createdAt\": \"2024-05-31T06:45:59.733Z\",\n                        \"updatedAt\": \"2024-05-31T06:45:59.733Z\",\n                        \"__v\": 0\n                    },\n                    {\n                        \"_id\": \"665972a4fdc7d61c9b193729\",\n                        \"type\": \"MCQ\",\n                        \"hint\": \"Name of  king from Ramayana\",\n                        \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                        \"options\": [\n                            \"Mumbai\",\n                            \"kolkata\",\n                            \"chennai\",\n                            \"New Delhi\"\n                        ],\n                        \"correctOption\": \"bharat\",\n                        \"createdAt\": \"2024-05-31T06:48:04.750Z\",\n                        \"updatedAt\": \"2024-05-31T06:48:04.750Z\",\n                        \"__v\": 0\n                    }\n                ]\n            }\n        ],\n        \"totalCount\": 4\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "change visibility",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Node.js set Basic\",\r\n    \"isvisible\":true,\r\n    \"passingMarks\":1000,\r\n    \"serialNumber\":4200\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/questionSet/changeVisibility/6656d3a888baa5b7875d0376",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"questionSet",
+										"changeVisibility",
+										"6656d3a888baa5b7875d0376"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "change visibility",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/questionSet/changeVisibility/6662ae7dc74b6d65a28342c7",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"questionSet",
+												"changeVisibility",
+												"6662ae7dc74b6d65a28342c7"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "86"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"56-dh4mEmUlBOGgUJpg/HcrgW/pQX8\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 06:54:46 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"message\": \"visibility of QuestionSet updated successfully\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Node.js set Basic updated by shakir ansari\",\r\n    \"isvisible\":true,\r\n    \"passingMarks\":1000,\r\n    \"serialNumber\":4200\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/questionSet/6656d074030bf7351dfbece8",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"questionSet",
+										"6656d074030bf7351dfbece8"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "update",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Question on Micro services\",\r\n    \"isvisible\":true,\r\n    \"passingMarks\":30,\r\n    \"duration\":30,\r\n    \"noOfQuestion\":5,\r\n    \"serialNumber\":\"01\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/questionSet/6662ad60044a2822f9a3dd44",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"questionSet",
+												"6662ad60044a2822f9a3dd44"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "72"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"48-y/mg2C//tl+Cb0NTLia9K3Df4VQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 06:50:38 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"message\": \"QuestionSet updated successfully\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Node.js set Basic updated by shakir ansari\",\r\n    \"isvisible\":true,\r\n    \"passingMarks\":1000,\r\n    \"serialNumber\":4200\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/questionSet/6656d98d68182228209cdab7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"questionSet",
+										"6656d98d68182228209cdab7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "question",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"statement\":\"what is full name of shakir\",\r\n    // \"options\":[\"english\",\"marathi\",\"hindi\",\"urdu\"],\r\n    \"hint\":null,\r\n    \"type\":\"TEXT\",\r\n    \"correctOption\":\"mohd shakir mohd shabbir ansari\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/question/6656cdbc9eec676cc7b88352",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"question",
+										"6656cdbc9eec676cc7b88352"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "create question by QuestionsetId",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"question\":\"India is also called is\",\r\n     \"options\":[\"Mumbai\",\"kolkata\",\"chennai\",\"New Delhi\"],\r\n    \"hint\":\"Name of  king from Ramayana\",\r\n    \"type\":\"MCQ\", \r\n    \"correctOption\":\"bharat\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/question/6662ae7dc74b6d65a28342c7",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"question",
+												"6662ae7dc74b6d65a28342c7"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "407"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"197-PI43iuIpMR2w8+lFgTfdot80aGw\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 06:58:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"message\": \"Question added successfully\",\n        \"question\": {\n            \"question\": \"India is also called is\",\n            \"type\": \"MCQ\",\n            \"hint\": \"Name of  king from Ramayana\",\n            \"questionSetId\": \"6662ae7dc74b6d65a28342c7\",\n            \"options\": [\n                \"Mumbai\",\n                \"kolkata\",\n                \"chennai\",\n                \"New Delhi\"\n            ],\n            \"correctOption\": \"bharat\",\n            \"_id\": \"6662afa5c74b6d65a28342ce\",\n            \"createdAt\": \"2024-06-07T06:58:45.308Z\",\n            \"updatedAt\": \"2024-06-07T06:58:45.308Z\",\n            \"__v\": 0\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "getAllQuestionOfQuestionSet",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/question/questionSetQuestions/665970ebfdc7d61c9b19371f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"question",
+										"questionSetQuestions",
+										"665970ebfdc7d61c9b19371f"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "getAllQuestionOfQuestionSet",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/question/questionSetQuestions/665970ebfdc7d61c9b19371f",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"question",
+												"questionSetQuestions",
+												"665970ebfdc7d61c9b19371f"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1517"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"5ed-KfaG31n1E0mHkaeYJ4tvCOrM/B0\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 07:04:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"data\": [\n            {\n                \"_id\": \"665972a4fdc7d61c9b193729\",\n                \"type\": \"MCQ\",\n                \"hint\": \"Name of  king from Ramayana\",\n                \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                \"options\": [\n                    \"Mumbai\",\n                    \"kolkata\",\n                    \"chennai\",\n                    \"New Delhi\"\n                ],\n                \"correctOption\": \"bharat\",\n                \"createdAt\": \"2024-05-31T06:48:04.750Z\",\n                \"updatedAt\": \"2024-05-31T06:48:04.750Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"66597227fdc7d61c9b193727\",\n                \"type\": \"MCQ\",\n                \"hint\": \"Located at the Arabean Sea \",\n                \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                \"options\": [\n                    \"Mumbai\",\n                    \"kolkata\",\n                    \"chennai\",\n                    \"New Delhi\"\n                ],\n                \"correctOption\": \"chennai\",\n                \"createdAt\": \"2024-05-31T06:45:59.733Z\",\n                \"updatedAt\": \"2024-05-31T06:45:59.733Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"665971dffdc7d61c9b193725\",\n                \"type\": \"MCQ\",\n                \"hint\": \"Located at the Arabean Sea \",\n                \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                \"options\": [\n                    \"Mumbai\",\n                    \"kolkata\",\n                    \"chennai\",\n                    \"New Delhi\"\n                ],\n                \"correctOption\": \"kolkata\",\n                \"createdAt\": \"2024-05-31T06:44:47.193Z\",\n                \"updatedAt\": \"2024-05-31T06:44:47.193Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"665971b3fdc7d61c9b193723\",\n                \"type\": \"MCQ\",\n                \"hint\": \"Located at the Arabean Sea \",\n                \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                \"options\": [\n                    \"Mumbai\",\n                    \"kolkata\",\n                    \"chennai\",\n                    \"New Delhi\"\n                ],\n                \"correctOption\": \"Mumbai\",\n                \"createdAt\": \"2024-05-31T06:44:03.340Z\",\n                \"updatedAt\": \"2024-05-31T06:44:03.340Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6659717cfdc7d61c9b193721\",\n                \"type\": \"MCQ\",\n                \"hint\": \"Located at the hear of India\",\n                \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n                \"options\": [\n                    \"Mumbai\",\n                    \"kolkata\",\n                    \"chennai\",\n                    \"New Delhi\"\n                ],\n                \"correctOption\": \"New Delhi\",\n                \"createdAt\": \"2024-05-31T06:43:08.578Z\",\n                \"updatedAt\": \"2024-05-31T06:43:08.578Z\",\n                \"__v\": 0\n            }\n        ],\n        \"totalCount\": 5\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "getById",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"statement\":\"what is full name of shakir\",\r\n    // \"options\":[\"english\",\"marathi\",\"hindi\",\"urdu\"],\r\n    \"hint\":null,\r\n    \"type\":\"TEXT\",\r\n    \"correctOption\":\"mohd shakir mohd shabbir ansari\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/question/6656e13127788180b01a3f66",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"question",
+										"6656e13127788180b01a3f66"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "getById",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/question/6662af92c74b6d65a28342cc",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"question",
+												"6662af92c74b6d65a28342cc"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "356"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"164-Si/aytPSoBJ3vRy0MauotJaoykU\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 07:03:08 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": [\n        {\n            \"_id\": \"6662af92c74b6d65a28342cc\",\n            \"question\": \"India is also called is\",\n            \"type\": \"MCQ\",\n            \"hint\": \"Name of  king from Ramayana\",\n            \"questionSetId\": \"6662ae7dc74b6d65a28342c7\",\n            \"options\": [\n                \"Mumbai\",\n                \"kolkata\",\n                \"chennai\",\n                \"New Delhi\"\n            ],\n            \"correctOption\": \"bharat\",\n            \"createdAt\": \"2024-06-07T06:58:26.873Z\",\n            \"updatedAt\": \"2024-06-07T06:58:26.873Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"statement\":\"what is full name of shakir updated\",\r\n    // \"options\":[\"english\",\"marathi\",\"hindi\",\"urdu\"],\r\n    \"hint\":null,\r\n    \"type\":\"TEXT\",\r\n    \"correctOption\":\"mohd shakir mohd shabbir ansari\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/question/6656e0cb27788180b01a3f64",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"question",
+										"6656e0cb27788180b01a3f64"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "updateById",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"question\":\"India is also called is\",\r\n     \"options\":[\"Mumbai\",\"kolkata\",\"chennai\",\"New Delhi\"],\r\n    \"hint\":\"Name of  king from Ramayana which is also a name of river\",\r\n    \"type\":\"MCQ\", \r\n    \"correctOption\":\"bharat\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/question/6662afa5c74b6d65a28342ce",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"question",
+												"6662afa5c74b6d65a28342ce"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "69"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"45-2MDZTrVZ1UnyZ+zMfihLFyjz7GI\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 07:00:41 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"message\": \"Question updated successfully\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"statement\":\"what is full name of shakir updated\",\r\n    // \"options\":[\"english\",\"marathi\",\"hindi\",\"urdu\"],\r\n    \"hint\":null,\r\n    \"type\":\"TEXT\",\r\n    \"correctOption\":\"mohd shakir mohd shabbir ansari\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/question/6656e0cb27788180b01a3f64",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"question",
+										"6656e0cb27788180b01a3f64"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"statement\":\"what is full name of shakir updated\",\r\n    // \"options\":[\"english\",\"marathi\",\"hindi\",\"urdu\"],\r\n    \"hint\":null,\r\n    \"type\":\"TEXT\",\r\n    \"correctOption\":\"mohd shakir mohd shabbir ansari\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/question/6662afa5c74b6d65a28342ce",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"question",
+												"6662afa5c74b6d65a28342ce"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "69"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"45-68FEy/5GBUk5BP8rnbAMynh+TyQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 07:01:37 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"message\": \"Question deleted successfully\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Seminar",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Seminar NODE js VMV college Nagpur\",\r\n    \"type\":\"SEMINAR\",\r\n    \"college\":\"VMV Nagpur\",\r\n    \"degree\":\"BCA\",\r\n    \"dateOfSeminar\":\"01/01/2024\",\r\n    \"duration\":60,\r\n    \"description\":\"Conducting the Node developer interview and seminar in SB jain 2024\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/seminar",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"seminar"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Seminar NODE js VMV college Nagpur\",\r\n    \"type\":\"SEMINAR\",\r\n    \"college\":\"VMV Nagpur\",\r\n    \"degree\":\"BCA\",\r\n    \"dateOfSeminar\":\"01/01/2024\",\r\n    \"duration\":60,\r\n    \"description\":\"Conducting the Node developer interview and seminar in SB jain 2024\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/seminar",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"seminar"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "66"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"42-eE3FRjNa4YROduYCIOhApMkTv+g\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 06:39:31 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"message\": \"Seminar added successfully\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Seminar of SB Jain Node developer with Sachin sir and Gandhar sir\",\r\n    \"email\":\"shakir111@gmail.com\",\r\n    \"lastName\":\"ansari\",\r\n    \"degree\":\"BCA\",\r\n    \"description\":\"Conducting the Node developer interview and seminar in SB jain 2024\",\r\n    \"college\":\"SB jain Nagpur\",\r\n    \"phone\":895636996\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/seminar/6656ce239eec676cc7b88354",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"seminar",
+										"6656ce239eec676cc7b88354"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "update seminar",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\":\"Seminar NODE js VMV college \",\r\n    \"type\":\"SEMINAR\",\r\n    \"college\":\"VMV Nagpur\",\r\n    \"degree\":\"BCA\",\r\n    \"dateOfSeminar\":\"01/01/2024\",\r\n    \"duration\":90,\r\n    \"description\":\"Conducting the Node developer interview and seminar in SB jain 2024\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/seminar/6662ab23baf2519f8cb7ee72",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"seminar",
+												"6662ab23baf2519f8cb7ee72"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "68"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"44-GzfaTdKBpQBJ9IKad14ZAJ43SH8\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 06:40:53 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"message\": \"Seminar updated successfully\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "getById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/seminar/6656ce239eec676cc7b88354",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"seminar",
+										"6656ce239eec676cc7b88354"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get by Id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/seminar/6662ab23baf2519f8cb7ee72",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"seminar",
+												"6662ab23baf2519f8cb7ee72"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "382"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"17e-zbSfYeBNATzSv1MG6causL8nKik\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 06:41:27 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": [\n        {\n            \"_id\": \"6662ab23baf2519f8cb7ee72\",\n            \"name\": \"Seminar NODE js VMV college \",\n            \"type\": \"SEMINAR\",\n            \"degree\": \"BCA\",\n            \"college\": \"VMV Nagpur\",\n            \"dateOfSeminar\": \"2023-12-31T18:30:00.000Z\",\n            \"description\": \"Conducting the Node developer interview and seminar in SB jain 2024\",\n            \"duration\": 90,\n            \"createdAt\": \"2024-06-07T06:39:31.571Z\",\n            \"updatedAt\": \"2024-06-07T06:40:53.076Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "getAll",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/seminar/?pageSize=9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"seminar",
+										""
+									],
+									"query": [
+										{
+											"key": "pageSize",
+											"value": "9"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "getAll",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "authorization",
+												"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NWVhY2FjYzkyN2QyZDYwMDMzZTJiZCIsImlhdCI6MTcxNzY2NDI1NywiZXhwIjoxNzE4MjY5MDU3fQ.kCyVZcfbOaEl9LWXcQUdSuu3MqSOOMJOPQ0h_zsEXL0"
+											}
+										],
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/seminar/?pageSize=9",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"seminar",
+												""
+											],
+											"query": [
+												{
+													"key": "pageSize",
+													"value": "9"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1985"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"7c1-uXfomeA49U8vH+vEk6LorLGTpoU\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 06:41:49 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"data\": [\n            {\n                \"_id\": \"6662ab23baf2519f8cb7ee72\",\n                \"name\": \"Seminar NODE js VMV college \",\n                \"type\": \"SEMINAR\",\n                \"degree\": \"BCA\",\n                \"college\": \"VMV Nagpur\",\n                \"dateOfSeminar\": \"2023-12-31T18:30:00.000Z\",\n                \"description\": \"Conducting the Node developer interview and seminar in SB jain 2024\",\n                \"duration\": 90,\n                \"createdAt\": \"2024-06-07T06:39:31.571Z\",\n                \"updatedAt\": \"2024-06-07T06:40:53.076Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6662aae7a3065bd7ef7b58c0\",\n                \"name\": \"Seminar NODE js VMV college Nagpur\",\n                \"type\": \"SEMINAR\",\n                \"college\": \"VMV Nagpur\",\n                \"dateOfSeminar\": \"2023-12-31T18:30:00.000Z\",\n                \"description\": \"Conducting the Node developer interview and seminar in SB jain 2024\",\n                \"createdAt\": \"2024-06-07T06:38:31.233Z\",\n                \"updatedAt\": \"2024-06-07T06:38:31.233Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6662aa0e1f37a0d5abffcf82\",\n                \"name\": \"Seminar NODE js VMV college Nagpur\",\n                \"type\": \"SEMINAR\",\n                \"college\": \"VMV Nagpur\",\n                \"dateOfSeminar\": \"2023-12-31T18:30:00.000Z\",\n                \"description\": \"Conducting the Node developer interview and seminar in SB jain 2024\",\n                \"createdAt\": \"2024-06-07T06:34:54.875Z\",\n                \"updatedAt\": \"2024-06-07T06:34:54.875Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6662a9ed1f37a0d5abffcf7f\",\n                \"name\": \"Seminar NODE js VMV college Nagpur\",\n                \"type\": \"SEMINAR\",\n                \"college\": \"VMV Nagpur\",\n                \"dateOfSeminar\": \"2023-12-31T18:30:00.000Z\",\n                \"description\": \"Conducting the Node developer interview and seminar in SB jain 2024\",\n                \"createdAt\": \"2024-06-07T06:34:21.483Z\",\n                \"updatedAt\": \"2024-06-07T06:34:21.483Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"66600c52682e068e51627cd1\",\n                \"name\": \"Seminar NODE js VMV college Nagpur\",\n                \"type\": \"SEMINAR\",\n                \"college\": \"SB jain Nagpur\",\n                \"description\": \"Conducting the Node developer interview and seminar in SB jain 2024\",\n                \"createdAt\": \"2024-06-05T06:57:22.423Z\",\n                \"updatedAt\": \"2024-06-05T06:57:22.423Z\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"6659701b6d0b98b7e76e6075\",\n                \"name\": \"Seminar React JD college Nagpur\",\n                \"type\": \"SEMINAR\",\n                \"college\": \"SB jain Nagpur\",\n                \"description\": \"Conducting the Node developer interview and seminar in SB jain 2024\",\n                \"createdAt\": \"2024-05-31T06:37:15.315Z\",\n                \"updatedAt\": \"2024-05-31T06:37:15.315Z\",\n                \"__v\": 0\n            }\n        ],\n        \"totalCount\": 6\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/seminar/6656ce239eec676cc7b88354",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"seminar",
+										"6656ce239eec676cc7b88354"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "delete",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/seminar/6662aa0e1f37a0d5abffcf82",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"seminar",
+												"6662aa0e1f37a0d5abffcf82"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "68"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"44-mnJDO8UcESCrmenc7ofZz8mJ4lg\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 06:42:20 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"success\": true,\n    \"result\": {\n        \"message\": \"Seminar deleted successfully\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "result",
+					"item": [
+						{
+							"name": "rankedStudent",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTZmODA1NTY1MmRkZTRhYWIxMGI0YiIsImlhdCI6MTcxNzE0OTY0NCwiZXhwIjoxNzE3NzU0NDQ0fQ.Cd25khi8myEksfSggZ-6gleTDkhFi5ql8aDqo7HcS-4"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"seminarId\": \"6659701b6d0b98b7e76e6075\",\r\n            \"questionSetId\": \"665970ebfdc7d61c9b19371f\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:2024/api/v1/admin/result/rankedStudent?top=3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "2024",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"result",
+										"rankedStudent"
+									],
+									"query": [
+										{
+											"key": "top",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "rankedStudent",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "authorization",
+												"value": " Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTZmODA1NTY1MmRkZTRhYWIxMGI0YiIsImlhdCI6MTcxNzE0OTY0NCwiZXhwIjoxNzE3NzU0NDQ0fQ.Cd25khi8myEksfSggZ-6gleTDkhFi5ql8aDqo7HcS-4"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n            \"seminarId\": \"6659701b6d0b98b7e76e6075\",\r\n            \"questionSetId\": \"665970ebfdc7d61c9b19371f\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:2024/api/v1/admin/result/rankedStudent?top=3",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "2024",
+											"path": [
+												"api",
+												"v1",
+												"admin",
+												"result",
+												"rankedStudent"
+											],
+											"query": [
+												{
+													"key": "top",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Security-Policy",
+											"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+										},
+										{
+											"key": "Cross-Origin-Embedder-Policy",
+											"value": "require-corp"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Origin-Agent-Cluster",
+											"value": "?1"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "no-referrer"
+										},
+										{
+											"key": "Strict-Transport-Security",
+											"value": "max-age=15552000; includeSubDomains"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-DNS-Prefetch-Control",
+											"value": "off"
+										},
+										{
+											"key": "X-Download-Options",
+											"value": "noopen"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-Permitted-Cross-Domain-Policies",
+											"value": "none"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "1131"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"46b-Gwhisxp2PA8IB8v9LMNXjWafCsY\""
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 07 Jun 2024 07:07:57 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"totalStudent\": 5,\n    \"noOfAttemptedStudent\": 4,\n    \"noOfUnattemptedStudent\": 1,\n    \"percentageOfPassStudent\": 60,\n    \"percentageOfFailStudent\": 40,\n    \"noOfPassStudent\": 3,\n    \"noOfFailStudent\": 2,\n    \"topStudent\": [\n        {\n            \"_id\": \"665975f4fdc7d61c9b193738\",\n            \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n            \"studentId\": \"66597389fdc7d61c9b19372e\",\n            \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n            \"status\": \"PASS\",\n            \"obtainMarks\": 50,\n            \"passingMarks\": 30,\n            \"maxScore\": 50,\n            \"createdAt\": \"2024-05-31T07:02:12.494Z\",\n            \"updatedAt\": \"2024-05-31T07:02:12.494Z\",\n            \"__v\": 0,\n            \"rank\": 1\n        },\n        {\n            \"_id\": \"66597755fdc7d61c9b193744\",\n            \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n            \"studentId\": \"6659742afdc7d61c9b193732\",\n            \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n            \"status\": \"PASS\",\n            \"obtainMarks\": 45,\n            \"passingMarks\": 30,\n            \"maxScore\": 50,\n            \"createdAt\": \"2024-05-31T07:08:05.206Z\",\n            \"updatedAt\": \"2024-05-31T07:08:05.206Z\",\n            \"__v\": 0,\n            \"rank\": 2\n        },\n        {\n            \"_id\": \"66597713fdc7d61c9b193740\",\n            \"seminarId\": \"6659701b6d0b98b7e76e6075\",\n            \"studentId\": \"665973f5fdc7d61c9b193730\",\n            \"questionSetId\": \"665970ebfdc7d61c9b19371f\",\n            \"status\": \"PASS\",\n            \"obtainMarks\": 40,\n            \"passingMarks\": 30,\n            \"maxScore\": 50,\n            \"createdAt\": \"2024-05-31T07:06:59.331Z\",\n            \"updatedAt\": \"2024-05-31T07:06:59.331Z\",\n            \"__v\": 0,\n            \"rank\": 3\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}
