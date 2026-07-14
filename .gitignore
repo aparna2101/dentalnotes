@@ -1,5 +1,7 @@
 node_modules/
 **/node_modules/
+npm_cache_temp/
+**/npm_cache_temp/
 dist/
 build/
 .vercel/
