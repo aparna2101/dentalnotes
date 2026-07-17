@@ -78,29 +78,45 @@ const Chapter = () => {
               ------------
             </p>
 
-            {subjects.chapters?.sort((a, b) => {
-              const aNum = a.serialNumber;
-              const bNum = b.serialNumber;
-
-              // Check for null, undefined, or 0 — they should come last
-              const isANull = aNum === null || aNum === undefined || aNum === 0;
-              const isBNull = bNum === null || bNum === undefined || bNum === 0;
-
-              if (isANull && !isBNull) return 1;   // a should come after b
-              if (!isANull && isBNull) return -1;  // a should come before b
-
-              // If both are valid, sort normally
-              return aNum - bNum;
-            })?.map((item, index) => {
-              return (
+            {/* Extra Resources / Point-wise PDFs at the top */}
+            {subjects.chapters?.filter(c => c.isChapter === false)
+              ?.sort((a, b) => (a.serialNumber || 0) - (b.serialNumber || 0))
+              ?.map((item) => (
                 <div key={item._id} className="py-4">
                   <Link to={`/chapterpdf/${item._id}`}>
-                    <strong>Chapter {index + 1} : </strong>
+                    <strong>• {item.resourceType || "PYQs"} : </strong>
                     {item.chapterName}
                   </Link>
                 </div>
-              );
-            })}
+              ))
+            }
+
+            {/* Standard Numbered Chapters below */}
+            {subjects.chapters?.filter(c => c.isChapter !== false)
+              ?.sort((a, b) => {
+                const aNum = a.serialNumber;
+                const bNum = b.serialNumber;
+
+                // Check for null, undefined, or 0 — they should come last
+                const isANull = aNum === null || aNum === undefined || aNum === 0;
+                const isBNull = bNum === null || bNum === undefined || bNum === 0;
+
+                if (isANull && !isBNull) return 1;   // a should come after b
+                if (!isANull && isBNull) return -1;  // a should come before b
+
+                // If both are valid, sort normally
+                return aNum - bNum;
+              })
+              ?.map((item, index) => {
+                return (
+                  <div key={item._id} className="py-4">
+                    <Link to={`/chapterpdf/${item._id}`}>
+                      <strong>Chapter {index + 1} : </strong>
+                      {item.chapterName}
+                    </Link>
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>

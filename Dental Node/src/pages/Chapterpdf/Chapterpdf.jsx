@@ -182,7 +182,7 @@ const Chapterpdf = () => {
                 gap: "20px"
               }}>
                 <h3 style={{ fontSize: "1.3rem", fontWeight: "bold", color: "#333", borderBottom: "2px solid #ef305c", paddingBottom: "8px", marginBottom: "10px" }}>
-                  Chapter Videos
+                  Flashcard videos - Quick revision
                 </h3>
                 
                 <div style={{ display: "flex", flexDirection: "column", gap: "15px" }}>

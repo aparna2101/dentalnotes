@@ -3,7 +3,7 @@ import "../AddProduct/AddProduct";
 import upload_area from "../Assets/upload_area.svg";
 import { useEffect } from "react";
 import axios from "axios";
-// import { backend_url } from "../../App";
+import { backend_url } from "../../App";
 
 import { LoadingButton } from "@mui/lab";
 import { Box } from "@mui/material";
@@ -49,8 +49,10 @@ const AddChapter = () => {
       formData.append("chapterName", chapterDetails.chapterName);
       formData.append("subjectId", chapterDetails.subjectId);
       formData.append("serialNumber", chapterDetails.serialNumber);
+      formData.append("isChapter", chapterDetails.isChapter !== undefined ? chapterDetails.isChapter : true);
+      formData.append("resourceType", chapterDetails.resourceType || "PYQs");
       const response = await axios.put(
-        `https://api.dentalnotesrep.com/api/v1/website/user/updateChapter/${id}`,
+        `${backend_url}/api/v1/website/user/updateChapter/${id}`,
         formData
       );
 
@@ -75,7 +77,7 @@ const AddChapter = () => {
 
   async function fetchSubject() {
     const response = await axios.get(
-      "https://api.dentalnotesrep.com/api/v1/website/user/getAllSubject"
+      `${backend_url}/api/v1/website/user/getAllSubject`
     );
     console.log("your response", response.data.result.data);
     setSubjectOption(response.data.result.data);
@@ -86,7 +88,7 @@ const AddChapter = () => {
 
      const token=localStorage.getItem("token")
     const response = await axios.get(
-      `https://api.dentalnotesrep.com/api/v1/website/user/getChapterById/${id}`, {
+      `${backend_url}/api/v1/website/user/getChapterById/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`, // 👈 Add your token here
         },
@@ -136,20 +138,20 @@ debugger
   return (
     <div className="addproduct">
 
-
-
- <div className="addproduct-itemfield">
-        <p>SerialNumber</p>
-        <input
-          type="text"
-          name="serialNumber"
-          value={chapterDetails.serialNumber}
-          onChange={(e) => {
-            changeHandler(e);
-          }}
-          placeholder="Type here"
-        />
-      </div>
+      {chapterDetails.isChapter !== false && (
+        <div className="addproduct-itemfield">
+          <p>SerialNumber</p>
+          <input
+            type="text"
+            name="serialNumber"
+            value={chapterDetails.serialNumber}
+            onChange={(e) => {
+              changeHandler(e);
+            }}
+            placeholder="Type here"
+          />
+        </div>
+      )}
 
 
       <div className="addproduct-itemfield">
@@ -165,12 +167,27 @@ debugger
         />
       </div>
 
-
-
-
-      <div className="addproduct-price" style={{ marginTop: "40px" }}>
+      {chapterDetails.isChapter === false && (
         <div className="addproduct-itemfield">
-          <p>Notes PDF</p>
+          <p>Resource Prefix Label (e.g. PYQs, Syllabus, PDF)</p>
+          <input
+            type="text"
+            name="resourceType"
+            value={chapterDetails.resourceType || "PYQs"}
+            onChange={changeHandler}
+            placeholder="Type Resource Prefix (e.g. PYQs)"
+          />
+        </div>
+      )}
+
+
+
+
+
+
+      <div className="addproduct-price" style={{ marginTop: "40px", gridTemplateColumns: chapterDetails.isChapter === false ? "1fr" : "" }}>
+        <div className="addproduct-itemfield">
+          <p>{chapterDetails.isChapter === false ? "Notes / Resource PDF" : "Notes PDF"}</p>
           <label htmlFor="file-input2" style={{ cursor: "pointer" }}>
             <img
               className="addproduct-thumbnail-img"
@@ -199,29 +216,31 @@ debugger
 
 
 
-        <div className="addproduct-itemfield">
-          <p>Dictionary PDF</p>
-          <label htmlFor="file-input3" style={{ cursor: "pointer" }}>
-            <img
-              className="addproduct-thumbnail-img"
-              src={upload_area}
-              alt="Upload area"
+        {chapterDetails.isChapter !== false && (
+          <div className="addproduct-itemfield">
+            <p>Dictionary PDF</p>
+            <label htmlFor="file-input3" style={{ cursor: "pointer" }}>
+              <img
+                className="addproduct-thumbnail-img"
+                src={upload_area}
+                alt="Upload area"
+              />
+            </label>
+            <input
+              type="file"
+              onChange={e=>{setDistionaryfullpdf(e.target.files[0]);setDictionaryFileName(e.target.files[0].name)}}
+              name="dictionaryfullpdf"
+              id="file-input3"
+              accept="application/pdf"
+              hidden
             />
-          </label>
-          <input
-            type="file"
-            onChange={e=>{setDistionaryfullpdf(e.target.files[0]);setDictionaryFileName(e.target.files[0].name)}}
-            name="dictionaryfullpdf"
-            id="file-input3"
-            accept="application/pdf"
-            hidden
-          />
-          {dictionaryFileName && (
-            <p style={{ marginTop: "10px", fontSize: "14px", color: "#555" }}>
-              Dictionary PDF: <strong>{dictionaryFileName}</strong>
-            </p>
-          )}
-        </div>
+            {dictionaryFileName && (
+              <p style={{ marginTop: "10px", fontSize: "14px", color: "#555" }}>
+                Dictionary PDF: <strong>{dictionaryFileName}</strong>
+              </p>
+            )}
+          </div>
+        )}
       </div>
 
       <div className="addproduct-itemfield" style={{ marginTop: "40px" }}>

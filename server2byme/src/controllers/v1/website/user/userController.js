@@ -91,7 +91,7 @@ const userObj = {
         email: user.email,
         otp: otp
       };
-      
+
       try {
         mail.sendSignupOtpMail(emailData);
       } catch (mailError) {
@@ -253,11 +253,13 @@ const userObj = {
 
   createChapter: async (req, res) => {
     try {
-      const { chapterName, subjectId } = req.body;
+      const { chapterName, subjectId, isChapter, resourceType } = req.body;
 
       const data = {
         chapterName,
         subjectId,
+        isChapter: isChapter === 'false' || isChapter === false ? false : true,
+        resourceType: resourceType || "PYQs",
       };
 
       const existchapterName = await Chapter.findOne({
@@ -303,13 +305,21 @@ const userObj = {
 
   updateChapter: async (req, res) => {
     try {
-      const { chapterName, subjectId, serialNumber } = req.body;
+      const { chapterName, subjectId, serialNumber, isChapter, resourceType } = req.body;
 
       const data = {
         chapterName,
         subjectId,
         serialNumber,
       };
+
+      if (isChapter !== undefined) {
+        data.isChapter = isChapter === 'false' || isChapter === false ? false : true;
+      }
+
+      if (resourceType !== undefined) {
+        data.resourceType = resourceType;
+      }
 
       const existing = await Chapter.findById(req.params.id);
 
@@ -574,11 +584,11 @@ const userObj = {
 
   setBundlePrice: async (req, res) => {
     try {
-      const { year, courseType, price, description } = req.body;
+      const { year, courseType, price, description, discount, promoTag } = req.body;
 
       const bundle = await CourseBundle.findOneAndUpdate(
         { year, courseType },
-        { price, description },
+        { price, description, discount, promoTag },
         { new: true, upsert: true }
       );
 

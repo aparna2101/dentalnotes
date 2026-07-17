@@ -29,6 +29,14 @@ const ChapterSchema = mongoose.Schema(
             type: String,
 
         },
+        isChapter: {
+            type: Boolean,
+            default: true
+        },
+        resourceType: {
+            type: String,
+            default: "PYQs"
+        },
     },
     {
         timestamps: true,

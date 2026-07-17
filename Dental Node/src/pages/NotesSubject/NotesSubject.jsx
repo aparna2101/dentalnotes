@@ -120,11 +120,16 @@ const NotesSubject = () => {
       key={item._id}
       sx={{
         width: {
-          xs: "100%",
-          sm: "47%",
+          xs: "90%",
+          sm: "46%",
           md: "30%",
-          lg: "20%",
+          lg: "23%",
         },
+        maxWidth: {
+          xs: "340px",
+          sm: "none",
+        },
+        mx: { xs: "auto", sm: 0 },
         transition: "all 0.3s",
       }}
     >
@@ -143,7 +148,7 @@ const NotesSubject = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          p: 2,
+          p: 1.5,
           textAlign: "center",
           height: "100%",
         }}
@@ -154,10 +159,15 @@ const NotesSubject = () => {
           alt={item.subjectName}
           sx={{
             width: "100%",
-            height: 160,
+            height: {
+              xs: 150,
+              sm: 130,
+              md: 120,
+              lg: 115,
+            },
             objectFit: "cover",
             borderRadius: 1.5,
-            mb: 1.5,
+            mb: 1,
           }}
         />
 
@@ -171,9 +181,9 @@ const NotesSubject = () => {
             WebkitLineClamp: 2,
             overflow: "hidden",
             width: "100%",
-            mb: 0.5,
-            height: "3rem",
-            lineHeight: "1.5rem"
+            mb: 0.25,
+            height: "2.6rem",
+            lineHeight: "1.3rem"
           }}
         >
           {item?.subjectName}
@@ -188,14 +198,15 @@ const NotesSubject = () => {
             WebkitLineClamp: 2,
             overflow: "hidden",
             width: "100%",
-            height: "2.5rem",
-            lineHeight: "1.25rem"
+            height: "2.2rem",
+            lineHeight: "1.1rem",
+            fontSize: "0.825rem"
           }}
         >
           {item?.description}
         </Typography>
 
-        <Box sx={{ mt: "auto", pt: 1.5, width: "100%" }}>
+        <Box sx={{ mt: "auto", pt: 0.75, width: "100%" }}>
           {item.isPurchased || isPremium ? (
             <Button
               component={Link}
@@ -206,10 +217,10 @@ const NotesSubject = () => {
                 "&:hover": { backgroundColor: "indigo.700" },
                 borderRadius: "6px",
                 px: 2.5,
-                py: 1,
+                py: 0.7,
                 textTransform: "none",
                 fontWeight: 500,
-                fontSize: "0.9rem",
+                fontSize: "0.85rem",
                 width: "100%"
               }}
             >
@@ -222,15 +233,15 @@ const NotesSubject = () => {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                gap: 1,
-                p: 1,
+                gap: 0.75,
+                p: 0.5,
                 borderRadius: 2,
                 width: "100%"
               }}
             >
               <Typography
-                variant="subtitle1"
-                sx={{ fontWeight: 600, color: "primary.main" }}
+                variant="subtitle2"
+                sx={{ fontWeight: 600, color: "primary.main", fontSize: "0.9rem" }}
               >
                 ₹{item.price}
               </Typography>
@@ -238,15 +249,16 @@ const NotesSubject = () => {
               <Button
                 variant="contained"
                 color="primary"
-                size="medium"
+                size="small"
                 onClick={() => handleBuySubject({ data: item })}
                 sx={{
                   width: "100%",
-                  maxWidth: 200,
+                  maxWidth: 180,
                   borderRadius: "6px",
                   textTransform: "none",
                   fontWeight: 500,
-                  py: 0.8,
+                  py: 0.7,
+                  fontSize: "0.85rem",
                 }}
               >
                 Buy Now
@@ -296,6 +308,9 @@ const NotesSubject = () => {
       </Box>
     </Box>
   );
+
+  const challengeBundle = bundlePrices.find(b => b.year === selectedYear && b.courseType === "Challenge");
+  const detailedBundle = bundlePrices.find(b => b.year === selectedYear && b.courseType === "Detailed");
 
   return (
     <>
@@ -351,7 +366,7 @@ const NotesSubject = () => {
             sx={{
               display: "flex",
               flexWrap: "wrap",
-              justifyContent: "flex-start",
+              justifyContent: { xs: "center", sm: "flex-start" },
               gap: 3,
               minHeight: "50px"
             }}
@@ -392,28 +407,101 @@ const NotesSubject = () => {
 
           {/* Buy All Bundle Card for Challenge Course */}
           {subject?.some(item => (!selectedYear || item.year === selectedYear) && item.courseType?.toLowerCase() === "challenge" && !item.isPurchased) &&
-            bundlePrices.find(b => b.year === selectedYear && b.courseType === "Challenge") && (
-              <Box sx={{ mt: 4, p: 3, borderRadius: 4, bgcolor: "#fff1f4", border: "2px dashed #ef305c", display: "flex", flexDirection: { xs: "column", sm: "row" }, alignItems: "center", justifyContent: "space-between", gap: 2 }}>
+            challengeBundle && (
+              <Box 
+                sx={{ 
+                  mt: 3, 
+                  mb: 2, 
+                  p: 1.5, 
+                  borderRadius: 2, 
+                  bgcolor: "#f0fdf4", 
+                  border: "1.5px dashed #16a34a", 
+                  display: "flex", 
+                  flexDirection: "column", 
+                  alignItems: "center", 
+                  textAlign: "center",
+                  maxWidth: "360px", 
+                  width: "90%", 
+                  mx: "auto", 
+                  gap: 1 
+                }}
+              >
                 <Box>
-                  <Typography variant="h6" sx={{ fontWeight: "bold", color: "#ef305c" }}>
+                  <Typography variant="subtitle2" sx={{ fontWeight: "bold", color: "#15803d", fontSize: "0.95rem" }}>
                     🚀 Special Offer: Buy All {selectedYear} Year Detailed Course Subjects
                   </Typography>
-                  <Typography variant="body2" sx={{ color: "#666" }}>
-                    {bundlePrices.find(b => b.year === selectedYear && b.courseType === "Challenge")?.description || "Get instant access to all subjects in this category at a discounted price!"}
+                  <Typography variant="body2" sx={{ color: "#555", fontSize: "0.75rem", mt: 0.5 }}>
+                    {challengeBundle.description || "Get instant access to all subjects in this category at a discounted price!"}
                   </Typography>
                 </Box>
-                <Box sx={{ textAlign: "center" }}>
-                  <Typography variant="h5" sx={{ fontWeight: "bold", color: "#ef305c", mb: 1 }}>
-                    ₹{bundlePrices.find(b => b.year === selectedYear && b.courseType === "Challenge")?.price}
-                  </Typography>
-                  <Button
-                    variant="contained"
-                    onClick={() => handleBuyBundle(selectedYear, "Challenge", bundlePrices.find(b => b.year === selectedYear && b.courseType === "Challenge")?.price)}
-                    sx={{ bgcolor: "#ef305c", "&:hover": { bgcolor: "#d92650" }, px: 4, py: 1.2, borderRadius: "10px", fontWeight: "bold", textTransform: "none" }}
+                {challengeBundle.discount && (
+                  <Box sx={{ width: "100%", my: 0.5 }}>
+                    {/* Top line with star */}
+                    <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", width: "70%", mx: "auto", mb: 0.5 }}>
+                      <Box sx={{ flex: 1, height: "1px", bgcolor: "#fbbf24", opacity: 0.8 }} />
+                      <Typography sx={{ color: "#fbbf24", mx: 0.75, fontSize: "0.8rem", lineHeight: 1 }}>★</Typography>
+                      <Box sx={{ flex: 1, height: "1px", bgcolor: "#fbbf24", opacity: 0.8 }} />
+                    </Box>
+                    
+                    {/* Text with sparkles */}
+                    <Typography 
+                      sx={{ 
+                        fontWeight: "900", 
+                        color: "#f59e0b", 
+                        fontSize: "1.25rem", 
+                        textAlign: "center",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.5px",
+                        textShadow: "1px 1.5px 0px #92400e, 0px 2px 4px rgba(0,0,0,0.2)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: 0.75
+                      }}
+                    >
+                      <span style={{ color: "#fbbf24", fontSize: "0.85rem" }}>✦</span>
+                      {challengeBundle.discount}
+                      <span style={{ color: "#fbbf24", fontSize: "0.85rem" }}>✦</span>
+                    </Typography>
+
+                    {/* Bottom line */}
+                    <Box sx={{ width: "70%", height: "1px", bgcolor: "#fbbf24", mx: "auto", mt: 0.5, opacity: 0.8 }} />
+                  </Box>
+                )}
+                {challengeBundle.promoTag && (
+                  <Box 
+                    sx={{ 
+                      display: "inline-flex", 
+                      alignItems: "center", 
+                      gap: 0.5, 
+                      bgcolor: "#fef3c7", 
+                      color: "#92400e", 
+                      px: 1.5, 
+                      py: 0.4, 
+                      borderRadius: "50px", 
+                      fontSize: "0.75rem", 
+                      fontWeight: "bold",
+                      mt: 0.5,
+                      border: "1px solid #fde68a"
+                    }}
                   >
-                    Buy All Now
-                  </Button>
-                </Box>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ display: "inline-block" }}>
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 15 14" />
+                    </svg>
+                    <span>{challengeBundle.promoTag}</span>
+                  </Box>
+                )}
+                <Typography variant="h6" sx={{ fontWeight: "bold", color: "#15803d", mt: 0.5 }}>
+                  ₹{challengeBundle.price}
+                </Typography>
+                <Button
+                  variant="contained"
+                  onClick={() => handleBuyBundle(selectedYear, "Challenge", challengeBundle.price)}
+                  sx={{ bgcolor: "#15803d", "&:hover": { bgcolor: "#166534" }, px: 3, py: 0.6, borderRadius: "4px", fontWeight: "bold", textTransform: "none", fontSize: "0.8rem", width: "100%", maxWidth: "200px" }}
+                >
+                  Buy All Now
+                </Button>
               </Box>
             )}
         </Box>
@@ -428,7 +516,7 @@ const NotesSubject = () => {
             sx={{
               display: "flex",
               flexWrap: "wrap",
-              justify: "flex-start",
+              justifyContent: { xs: "center", sm: "flex-start" },
               gap: 3,
               minHeight: "50px"
             }}
@@ -469,28 +557,101 @@ const NotesSubject = () => {
 
           {/* Buy All Bundle Card for Detailed Course */}
           {subject?.some(item => (!selectedYear || item.year === selectedYear) && item.courseType?.toLowerCase() === "detailed" && !item.isPurchased) &&
-            bundlePrices.find(b => b.year === selectedYear && b.courseType === "Detailed") && (
-              <Box sx={{ mt: 4, p: 3, borderRadius: 4, bgcolor: "#f1f4ff", border: "2px dashed #1353fe", display: "flex", flexDirection: { xs: "column", sm: "row" }, alignItems: "center", justifyContent: "space-between", gap: 2 }}>
+            detailedBundle && (
+              <Box 
+                sx={{ 
+                  mt: 3, 
+                  mb: 2, 
+                  p: 1.5, 
+                  borderRadius: 2, 
+                  bgcolor: "#f0f7ff", 
+                  border: "1.5px dashed #1d4ed8", 
+                  display: "flex", 
+                  flexDirection: "column", 
+                  alignItems: "center", 
+                  textAlign: "center",
+                  maxWidth: "360px", 
+                  width: "90%", 
+                  mx: "auto", 
+                  gap: 1 
+                }}
+              >
                 <Box>
-                  <Typography variant="h6" sx={{ fontWeight: "bold", color: "#1353fe" }}>
+                  <Typography variant="subtitle2" sx={{ fontWeight: "bold", color: "#1d4ed8", fontSize: "0.95rem" }}>
                     🌟 Special Offer: Buy All {selectedYear} Year Crash Course Subjects
                   </Typography>
-                  <Typography variant="body2" sx={{ color: "#666" }}>
-                    {bundlePrices.find(b => b.year === selectedYear && b.courseType === "Detailed")?.description || "Get instant access to all detailed subjects at a discounted price!"}
+                  <Typography variant="body2" sx={{ color: "#555", fontSize: "0.75rem", mt: 0.5 }}>
+                    {detailedBundle.description || "Get instant access to all detailed subjects at a discounted price!"}
                   </Typography>
                 </Box>
-                <Box sx={{ textAlign: "center" }}>
-                  <Typography variant="h5" sx={{ fontWeight: "bold", color: "#1353fe", mb: 1 }}>
-                    ₹{bundlePrices.find(b => b.year === selectedYear && b.courseType === "Detailed")?.price}
-                  </Typography>
-                  <Button
-                    variant="contained"
-                    onClick={() => handleBuyBundle(selectedYear, "Detailed", bundlePrices.find(b => b.year === selectedYear && b.courseType === "Detailed")?.price)}
-                    sx={{ bgcolor: "#1353fe", "&:hover": { bgcolor: "#0d42d3" }, px: 4, py: 1.2, borderRadius: "10px", fontWeight: "bold", textTransform: "none" }}
+                {detailedBundle.discount && (
+                  <Box sx={{ width: "100%", my: 0.5 }}>
+                    {/* Top line with star */}
+                    <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", width: "70%", mx: "auto", mb: 0.5 }}>
+                      <Box sx={{ flex: 1, height: "1px", bgcolor: "#fbbf24", opacity: 0.8 }} />
+                      <Typography sx={{ color: "#fbbf24", mx: 0.75, fontSize: "0.8rem", lineHeight: 1 }}>★</Typography>
+                      <Box sx={{ flex: 1, height: "1px", bgcolor: "#fbbf24", opacity: 0.8 }} />
+                    </Box>
+                    
+                    {/* Text with sparkles */}
+                    <Typography 
+                      sx={{ 
+                        fontWeight: "900", 
+                        color: "#f59e0b", 
+                        fontSize: "1.25rem", 
+                        textAlign: "center",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.5px",
+                        textShadow: "1px 1.5px 0px #92400e, 0px 2px 4px rgba(0,0,0,0.2)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: 0.75
+                      }}
+                    >
+                      <span style={{ color: "#fbbf24", fontSize: "0.85rem" }}>✦</span>
+                      {detailedBundle.discount}
+                      <span style={{ color: "#fbbf24", fontSize: "0.85rem" }}>✦</span>
+                    </Typography>
+
+                    {/* Bottom line */}
+                    <Box sx={{ width: "70%", height: "1px", bgcolor: "#fbbf24", mx: "auto", mt: 0.5, opacity: 0.8 }} />
+                  </Box>
+                )}
+                {detailedBundle.promoTag && (
+                  <Box 
+                    sx={{ 
+                      display: "inline-flex", 
+                      alignItems: "center", 
+                      gap: 0.5, 
+                      bgcolor: "#fef3c7", 
+                      color: "#92400e", 
+                      px: 1.5, 
+                      py: 0.4, 
+                      borderRadius: "50px", 
+                      fontSize: "0.75rem", 
+                      fontWeight: "bold",
+                      mt: 0.5,
+                      border: "1px solid #fde68a"
+                    }}
                   >
-                    Buy All Now
-                  </Button>
-                </Box>
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ display: "inline-block" }}>
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 15 14" />
+                    </svg>
+                    <span>{detailedBundle.promoTag}</span>
+                  </Box>
+                )}
+                <Typography variant="h6" sx={{ fontWeight: "bold", color: "#1d4ed8", mt: 0.5 }}>
+                  ₹{detailedBundle.price}
+                </Typography>
+                <Button
+                  variant="contained"
+                  onClick={() => handleBuyBundle(selectedYear, "Detailed", detailedBundle.price)}
+                  sx={{ bgcolor: "#1d4ed8", "&:hover": { bgcolor: "#1e40af" }, px: 3, py: 0.6, borderRadius: "4px", fontWeight: "bold", textTransform: "none", fontSize: "0.8rem", width: "100%", maxWidth: "200px" }}
+                >
+                  Buy All Now
+                </Button>
               </Box>
             )}
         </Box>
@@ -506,7 +667,7 @@ const NotesSubject = () => {
               sx={{
                 display: "flex",
                 flexWrap: "wrap",
-                justifyContent: "flex-start",
+                justifyContent: { xs: "center", sm: "flex-start" },
                 gap: 3,
               }}
             >

@@ -204,6 +204,19 @@ const userObj = {
       user.subscriptionInfo = moduleInfo;
       await user.save();
 
+      // Save pending transaction details to prevent overwriting issues on multiple clicks
+      await mongoose.connection.db.collection('PendingOrder').updateOne(
+        { _id: merchantTransactionId },
+        {
+          $set: {
+            userId: user._id,
+            subscriptionInfo: moduleInfo,
+            createdAt: new Date()
+          }
+        },
+        { upsert: true }
+      );
+
       const data = {
         merchantId: merchant_id,
         merchantTransactionId: merchantTransactionId,
@@ -237,6 +250,7 @@ const userObj = {
           accept: 'application/json',
           'Content-Type': 'application/json',
           'X-VERIFY': checksum,
+          'X-MERCHANT-ID': merchant_id
         },
         data: {
           request: payloadMain,
@@ -288,14 +302,19 @@ const userObj = {
       const paymentData = phonepeResponse?.data;
       console.log('PhonePe API Status response:', paymentData);
 
-      const user = await User.findOne({ orderId: id });
-      console.log('Your user found by orderId:', user);
+      // Retrieve the pending order mapping to get the correct user and subject
+      const pendingOrder = await mongoose.connection.db.collection('PendingOrder').findOne({ _id: id });
+      console.log('Your pending order found by id:', pendingOrder);
+
+      // Lookup user using the pending order's userId
+      const user = pendingOrder ? await User.findById(pendingOrder.userId) : null;
+      console.log('Your user found by pending order:', user);
 
       // Check if PhonePe returns successful payment code and state is COMPLETED
       const isSuccess = paymentData && (paymentData.code === 'PAYMENT_SUCCESS' || (paymentData.data && paymentData.data.state === 'COMPLETED'));
 
-      if (isSuccess && user) {
-        const subsctiption = user.subscriptionInfo;
+      if (isSuccess && user && pendingOrder) {
+        const subsctiption = pendingOrder.subscriptionInfo;
 
         // Check if history already exists to prevent duplicate insertion
         const existingHistory = await SubscriptionHistorhy.findOne({ orderId: id });
@@ -310,6 +329,9 @@ const userObj = {
           });
         }
         await user.save();
+
+        // Clean up pending order since it is successfully processed
+        await mongoose.connection.db.collection('PendingOrder').deleteOne({ _id: id });
         
         // Redirect back to frontend success page
         return res.redirect('https://dentalnotesrep.com/notessubject');

@@ -5,6 +5,7 @@ import { LoadingButton } from "@mui/lab";
 import { Typography, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, IconButton, Box } from "@mui/material";
 import { Edit as EditIcon, Delete as DeleteIcon, Clear as ClearIcon } from "@mui/icons-material";
 import { toast } from "react-toastify";
+import { backend_url } from "../../App";
 
 const ManageBundles = () => {
   const [loading, setLoading] = useState(false);
@@ -13,12 +14,14 @@ const ManageBundles = () => {
     year: "",
     courseType: "",
     price: "",
-    description: ""
+    description: "",
+    discount: "",
+    promoTag: ""
   });
 
   const fetchBundles = async () => {
     try {
-      const response = await axios.get("https://api.dentalnotesrep.com/api/v1/website/user/getBundlePrices");
+      const response = await axios.get(`${backend_url}/api/v1/website/user/getBundlePrices`);
       if (response.data.success || response.data.result) {
         setBundles(response.data.result.data || response.data.data || []);
       }
@@ -45,7 +48,7 @@ const ManageBundles = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        "https://api.dentalnotesrep.com/api/v1/website/user/setBundlePrice",
+        `${backend_url}/api/v1/website/user/setBundlePrice`,
         bundleDetails
       );
 
@@ -55,7 +58,9 @@ const ManageBundles = () => {
           year: "",
           courseType: "",
           price: "",
-          description: ""
+          description: "",
+          discount: "",
+          promoTag: ""
         });
         fetchBundles();
       }
@@ -72,7 +77,9 @@ const ManageBundles = () => {
       year: bundle.year,
       courseType: bundle.courseType,
       price: bundle.price,
-      description: bundle.description || ""
+      description: bundle.description || "",
+      discount: bundle.discount || "",
+      promoTag: bundle.promoTag || ""
     });
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -80,7 +87,7 @@ const ManageBundles = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this bundle price?")) {
       try {
-        const response = await axios.delete(`https://api.dentalnotesrep.com/api/v1/website/user/deleteBundlePrice/${id}`);
+        const response = await axios.delete(`${backend_url}/api/v1/website/user/deleteBundlePrice/${id}`);
         if (response.data.success) {
           toast.success("Bundle Price Deleted");
           fetchBundles();
@@ -97,7 +104,9 @@ const ManageBundles = () => {
       year: "",
       courseType: "",
       price: "",
-      description: ""
+      description: "",
+      discount: "",
+      promoTag: ""
     });
   };
 
@@ -105,7 +114,7 @@ const ManageBundles = () => {
     <div className="addproduct" style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
       <div className="add-bundle-form">
         <Typography variant="h5" sx={{ mb: 3, fontWeight: 'bold' }}>Set Bundle Price (Buy All Option)</Typography>
-        
+
         <div className="addproduct-itemfield">
           <p>Select Year</p>
           <select
@@ -159,6 +168,28 @@ const ManageBundles = () => {
           />
         </div>
 
+        <div className="addproduct-itemfield">
+          <p>Discount Tag (e.g. 20% Off)</p>
+          <input
+            type="text"
+            name="discount"
+            value={bundleDetails.discount}
+            onChange={changeHandler}
+            placeholder="e.g. 20% Off"
+          />
+        </div>
+
+        <div className="addproduct-itemfield">
+          <p>Promo Tag (e.g. Limited Time Offer)</p>
+          <input
+            type="text"
+            name="promoTag"
+            value={bundleDetails.promoTag}
+            onChange={changeHandler}
+            placeholder="e.g. Limited Time Offer"
+          />
+        </div>
+
         <Box sx={{ display: 'flex', gap: 2 }}>
           <LoadingButton
             onClick={updateBundle}
@@ -185,12 +216,14 @@ const ManageBundles = () => {
         <Typography variant="h6" sx={{ mb: 2, fontWeight: 'bold' }}>Current Bundle Prices</Typography>
         <TableContainer component={Paper}>
           <Table>
-            <TableHead sx={{ bgcolor: '#f9f9f9' }}>
+             <TableHead sx={{ bgcolor: '#f9f9f9' }}>
               <TableRow>
                 <TableCell>Year</TableCell>
                 <TableCell>Category</TableCell>
                 <TableCell>Price</TableCell>
                 <TableCell>Description</TableCell>
+                <TableCell>Discount</TableCell>
+                <TableCell>Promo Tag</TableCell>
                 <TableCell align="right">Actions</TableCell>
               </TableRow>
             </TableHead>
@@ -202,6 +235,8 @@ const ManageBundles = () => {
                     <TableCell>{b.courseType === "Challenge" ? "Detailed" : b.courseType === "Detailed" ? "Crash" : b.courseType} Course</TableCell>
                     <TableCell>₹{b.price}</TableCell>
                     <TableCell>{b.description}</TableCell>
+                    <TableCell>{b.discount || "N/A"}</TableCell>
+                    <TableCell>{b.promoTag || "N/A"}</TableCell>
                     <TableCell align="right">
                       <IconButton onClick={() => handleEdit(b)} color="primary" size="small">
                         <EditIcon fontSize="small" />
@@ -214,7 +249,7 @@ const ManageBundles = () => {
                 ))
               ) : (
                 <TableRow>
-                  <TableCell colSpan={4} align="center">No bundle prices set yet.</TableCell>
+                  <TableCell colSpan={7} align="center">No bundle prices set yet.</TableCell>
                 </TableRow>
               )}
             </TableBody>

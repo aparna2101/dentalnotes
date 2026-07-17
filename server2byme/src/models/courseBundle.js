@@ -16,6 +16,14 @@ const courseBundleSchema = new mongoose.Schema({
     description: {
         type: String,
         default: "Get access to all subjects in this course category."
+    },
+    discount: {
+        type: String,
+        default: ""
+    },
+    promoTag: {
+        type: String,
+        default: ""
     }
 }, { timestamps: true });
 
