@@ -91,7 +91,7 @@ className="mySwiper"
 >
 <SwiperSlide className=" text-center">
 <div style={{ height: '100vh',width: '400px', border: '1px solid black' }}>
-          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
+          <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
             <Viewer fileUrl={selectedPdf} />
           </Worker>
         </div>
