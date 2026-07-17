@@ -290,89 +290,154 @@ const Chapterpdf = () => {
               <h3 className="font-bold text-lg" style={{ margin: 0 }}>{activeVideo.title}</h3>
             </div>
 
-            <div className="relative aspect-video bg-black" style={{ position: "relative", backgroundColor: "black" }}>
-              <video
-                id="chapter-video-player"
-                src={activeVideo.url}
-                style={{ width: "100%", display: "block" }}
-                controls
-                autoPlay
-              />
-            </div>
+            <style>{`
+              #custom-video-wrapper-chapter:fullscreen {
+                background-color: black !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: center !important;
+                width: 100vw !important;
+                height: 100vh !important;
+              }
+              #custom-video-wrapper-chapter:fullscreen .custom-video-container-box {
+                flex: 1 !important;
+                width: 100% !important;
+                max-height: calc(100vh - 60px) !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                position: relative !important;
+              }
+              #custom-video-wrapper-chapter:fullscreen video {
+                height: 100% !important;
+                max-height: calc(100vh - 60px) !important;
+                width: auto !important;
+                max-width: 100% !important;
+              }
+              #custom-video-wrapper-chapter:fullscreen .custom-controls-container-box {
+                width: 100% !important;
+                height: 60px !important;
+                background: #222 !important;
+                box-sizing: border-box !important;
+              }
+            `}</style>
 
-            <div className="p-4 bg-[#222] flex items-center justify-between flex-wrap gap-4" style={{
-              padding: "15px",
-              background: "#222",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              flexWrap: "wrap",
-              gap: "15px"
-            }}>
-              <div className="flex gap-4" style={{ display: "flex", gap: "15px" }}>
-                <button
-                  onClick={() => {
-                    const video = document.getElementById("chapter-video-player");
-                    if (video) video.currentTime -= 10;
-                  }}
-                  style={{
-                    background: "rgba(255,255,255,0.1)",
-                    border: "none",
-                    color: "white",
-                    padding: "8px 16px",
-                    borderRadius: "4px",
-                    cursor: "pointer",
-                    fontWeight: "500",
-                    fontSize: "14px"
-                  }}
-                >
-                  ⏪ 10s
-                </button>
-                <button
-                  onClick={() => {
-                    const video = document.getElementById("chapter-video-player");
-                    if (video) video.currentTime += 10;
-                  }}
-                  style={{
-                    background: "rgba(255,255,255,0.1)",
-                    border: "none",
-                    color: "white",
-                    padding: "8px 16px",
-                    borderRadius: "4px",
-                    cursor: "pointer",
-                    fontWeight: "500",
-                    fontSize: "14px"
-                  }}
-                >
-                  10s ⏩
-                </button>
+            <div 
+              id="custom-video-wrapper-chapter" 
+              style={{ display: "flex", flexDirection: "column", position: "relative", width: "100%" }}
+            >
+              <div className="custom-video-container-box relative aspect-video bg-black" style={{ position: "relative", backgroundColor: "black" }}>
+                <video
+                  id="chapter-video-player"
+                  src={activeVideo.url}
+                  style={{ width: "100%", display: "block" }}
+                  controls
+                  autoPlay
+                />
               </div>
 
-              <div className="flex items-center gap-2" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                <span className="text-sm text-gray-400" style={{ color: "#aaa", fontSize: "14px" }}>Speed:</span>
-                <select
-                  onChange={(e) => {
-                    const video = document.getElementById("chapter-video-player");
-                    if (video) video.playbackRate = parseFloat(e.target.value);
-                  }}
-                  defaultValue="1"
-                  style={{
-                    background: "#333",
-                    border: "1px solid rgba(255,255,255,0.1)",
-                    borderRadius: "4px",
-                    padding: "6px 12px",
-                    fontSize: "14px",
-                    color: "white",
-                    outline: "none"
-                  }}
-                >
-                  <option value="0.5">0.5x</option>
-                  <option value="0.75">0.75x</option>
-                  <option value="1">1.0x (Normal)</option>
-                  <option value="1.25">1.25x</option>
-                  <option value="1.5">1.5x</option>
-                  <option value="2">2.0x</option>
-                </select>
+              <div className="custom-controls-container-box p-4 bg-[#222] flex items-center justify-between flex-wrap gap-4" style={{
+                padding: "15px",
+                background: "#222",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                flexWrap: "wrap",
+                gap: "15px"
+              }}>
+                <div className="flex gap-4" style={{ display: "flex", gap: "15px" }}>
+                  <button
+                    onClick={() => {
+                      const video = document.getElementById("chapter-video-player");
+                      if (video) video.currentTime -= 10;
+                    }}
+                    style={{
+                      background: "rgba(255,255,255,0.1)",
+                      border: "none",
+                      color: "white",
+                      padding: "8px 16px",
+                      borderRadius: "4px",
+                      cursor: "pointer",
+                      fontWeight: "500",
+                      fontSize: "14px"
+                    }}
+                  >
+                    ⏪ 10s
+                  </button>
+                  <button
+                    onClick={() => {
+                      const video = document.getElementById("chapter-video-player");
+                      if (video) video.currentTime += 10;
+                    }}
+                    style={{
+                      background: "rgba(255,255,255,0.1)",
+                      border: "none",
+                      color: "white",
+                      padding: "8px 16px",
+                      borderRadius: "4px",
+                      cursor: "pointer",
+                      fontWeight: "500",
+                      fontSize: "14px"
+                    }}
+                  >
+                    10s ⏩
+                  </button>
+                </div>
+
+                <div className="flex items-center gap-4" style={{ display: "flex", alignItems: "center", gap: "15px" }}>
+                  <div className="flex items-center gap-2" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+                    <span className="text-sm text-gray-400" style={{ color: "#aaa", fontSize: "14px" }}>Speed:</span>
+                    <select
+                      onChange={(e) => {
+                        const video = document.getElementById("chapter-video-player");
+                        if (video) video.playbackRate = parseFloat(e.target.value);
+                      }}
+                      defaultValue="1"
+                      style={{
+                        background: "#333",
+                        border: "1px solid rgba(255,255,255,0.1)",
+                        borderRadius: "4px",
+                        padding: "6px 12px",
+                        fontSize: "14px",
+                        color: "white",
+                        outline: "none"
+                      }}
+                    >
+                      <option value="0.5">0.5x</option>
+                      <option value="0.75">0.75x</option>
+                      <option value="1">1.0x (Normal)</option>
+                      <option value="1.25">1.25x</option>
+                      <option value="1.5">1.5x</option>
+                      <option value="2">2.0x</option>
+                    </select>
+                  </div>
+
+                  <button
+                    onClick={() => {
+                      const container = document.getElementById("custom-video-wrapper-chapter");
+                      if (container) {
+                        if (!document.fullscreenElement) {
+                          container.requestFullscreen().catch(err => console.log(err));
+                        } else {
+                          document.exitFullscreen();
+                        }
+                      }
+                    }}
+                    style={{
+                      background: "rgba(255,255,255,0.1)",
+                      border: "none",
+                      color: "white",
+                      padding: "8px 16px",
+                      borderRadius: "4px",
+                      cursor: "pointer",
+                      fontWeight: "500",
+                      fontSize: "14px"
+                    }}
+                  >
+                    📺 Fullscreen
+                  </button>
+                </div>
               </div>
             </div>
           </div>
